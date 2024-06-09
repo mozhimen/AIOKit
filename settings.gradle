@@ -21,8 +21,19 @@ dependencyResolutionManagement {
 
 rootProject.name = "AIOKit"
 include ':app'
+include ':iok_selector'
+include ':iok_scoped'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
-include ':iok_selector'
+//ACacheKit
+include ':ACacheKit'
+project(':ACacheKit').projectDir = new File("D:\\WorkSpace\\GitHub\\ACacheKit")
+include ':ACacheKit:cachek_datastore'
+include ':ACacheKit:cachek_basic'
+//ALibKit_Jetpack
+include ':ALibKit_Jetpack'
+project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
+include ':ALibKit_Jetpack:datastore'
+
