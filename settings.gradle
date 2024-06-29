@@ -23,6 +23,7 @@ rootProject.name = "AIOKit"
 include ':app'
 include ':iok_selector'
 include ':iok_scoped'
+include ':iok_ztzip'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
@@ -37,4 +38,3 @@ include ':ALibKit_Jetpack'
 project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
 include ':ALibKit_Jetpack:datastore'
 
-include ':iok_ztzip'
