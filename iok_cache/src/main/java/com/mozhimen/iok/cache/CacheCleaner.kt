@@ -1,4 +1,4 @@
-package com.example.iok.cache
+package com.mozhimen.iok.cache
 
 import androidx.annotation.WorkerThread
 import com.mozhimen.basick.utilk.android.text.formatFileSize
@@ -60,9 +60,11 @@ object CacheCleaner {
     suspend fun clean(requestedLimit: Long, vararg file: File) {
         withContext(Dispatchers.IO) {
             UtilKLogWrapper.i("Running cache cleanup lru task")
+
             val cacheLimit = getClosestCacheLimit(requestedLimit)
             val cacheFiles = UtilKFileWrapper.getFolderFiles_ofAllSorted(*file).toMutableList()
             val cacheSize = UtilKFileWrapper.getFilesSize_ofTotal(cacheFiles)
+
             UtilKLogWrapper.i("Space used by cache: ${cacheSize.formatFileSize()} / ${cacheLimit.formatFileSize()}")
 
             var spaceToBeDeleted = maxOf(cacheSize - cacheLimit, 0)
