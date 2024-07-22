@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.iok.cache'
+    namespace 'com.mozhimen.iok.cache'
     compileSdk 34
 
     defaultConfig {
