@@ -4,6 +4,7 @@ import androidx.annotation.WorkerThread
 import com.mozhimen.basick.elemk.commons.ISuspendA_Listener
 import com.mozhimen.basick.utilk.android.text.formatFileSize
 import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
+import com.mozhimen.basick.utilk.bases.BaseUtilK
 import com.mozhimen.basick.utilk.commons.IUtilK
 import com.mozhimen.basick.utilk.java.io.UtilKFileDir
 import com.mozhimen.basick.utilk.java.io.UtilKFileWrapper
@@ -21,7 +22,7 @@ import kotlin.math.roundToLong
  * @Date 2024/5/11
  * @Version 1.0
  */
-abstract class BaseIOKCacheCleaner : IUtilK {
+abstract class BaseIOKCacheCleaner : BaseUtilK() {
 
     //    private val MIN_CACHE_LIMIT = 64L.megaBytes()
     abstract val MIN_CACHE_LIMIT: Long
