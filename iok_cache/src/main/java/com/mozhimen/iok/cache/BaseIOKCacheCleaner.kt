@@ -65,12 +65,12 @@ abstract class BaseIOKCacheCleaner : BaseUtilK() {
     @WorkerThread
     suspend fun clean(requestedLimit: Long, files: List<File>, onDelete: ISuspendA_Listener<File>? = null) {
         withContext(Dispatchers.IO) {
-            UtilKLogWrapper.i(TAG, "Running cache cleanup lru task")
+            UtilKLogWrapper.i(TAG, "clean: Running cache cleanup lru task")
             val cacheLimit = if (requestedLimit != 0L) getClosestCacheLimit(requestedLimit) else 0L
             val cacheFiles = UtilKFileWrapper.getFolderFiles_ofAllSorted(files).toMutableList()
             val cacheSize = UtilKFileWrapper.getFilesSize_ofTotal(cacheFiles)
-            UtilKLogWrapper.i(TAG,"Space used by cache: ${cacheSize.formatFileSize()} / ${cacheLimit.formatFileSize()}")
-            UtilKLogWrapper.i(TAG,"Running cache cleanup lru task")
+            UtilKLogWrapper.i(TAG,"clean: Space used by cache: ${cacheSize.formatFileSize()} / ${cacheLimit.formatFileSize()}")
+            UtilKLogWrapper.i(TAG,"clean: Running cache cleanup lru task")
 
             var spaceToBeDeleted = maxOf(cacheSize - cacheLimit, 0)
 
@@ -79,12 +79,13 @@ abstract class BaseIOKCacheCleaner : BaseUtilK() {
             while (spaceToBeDeleted > 0) {
                 if (cacheFiles.size <= 0) break
                 val deletedFile = cacheFiles.removeAt(0)
+                UtilKLogWrapper.v(TAG, "clean: deletedFile $deletedFile")
                 onDelete?.invoke(deletedFile)
                 val size = deletedFile.length()
 
                 if (deletedFile.delete()) {
                     spaceToBeDeleted -= size
-                    UtilKLogWrapper.i(TAG, "Cache file deleted ${deletedFile.name}, size: ${size.formatFileSize()}")
+                    UtilKLogWrapper.i(TAG, "clean: Cache file deleted ${deletedFile.name}, size: ${size.formatFileSize()}")
                 }
             }
         }
