@@ -1,16 +1,16 @@
 package com.mozhimen.iok.scoped
 
 import androidx.fragment.app.FragmentActivity
-import com.mozhimen.basick.lintk.optins.OApiDeprecated_Official_AfterV_30_11_R
-import com.mozhimen.basick.lintk.optins.application.OApplication_PRESERVE_LEGACY_EXTERNAL_STORAGE
-import com.mozhimen.basick.lintk.optins.application.OApplication_REQUEST_LEGACY_EXTERNAL_STORAGE
-import com.mozhimen.basick.lintk.optins.permission.OPermission_MANAGE_EXTERNAL_STORAGE
-import com.mozhimen.basick.lintk.optins.permission.OPermission_READ_EXTERNAL_STORAGE
-import com.mozhimen.basick.lintk.optins.permission.OPermission_WRITE_EXTERNAL_STORAGE
+import com.mozhimen.kotlin.lintk.optins.OApiDeprecated_Official_AfterV_30_11_R
+import com.mozhimen.kotlin.lintk.optins.application.OApplication_PRESERVE_LEGACY_EXTERNAL_STORAGE
+import com.mozhimen.kotlin.lintk.optins.application.OApplication_REQUEST_LEGACY_EXTERNAL_STORAGE
+import com.mozhimen.kotlin.lintk.optins.permission.OPermission_MANAGE_EXTERNAL_STORAGE
+import com.mozhimen.kotlin.lintk.optins.permission.OPermission_READ_EXTERNAL_STORAGE
+import com.mozhimen.kotlin.lintk.optins.permission.OPermission_WRITE_EXTERNAL_STORAGE
 import com.mozhimen.iok.scoped.cons.CManifestKPermissionScoped
 import com.mozhimen.iok.scoped.helpers.IManifestKPermissionScopedListener
 import com.mozhimen.iok.scoped.helpers.InvisibleProxyFragmentScoped
-import com.mozhimen.basick.utilk.commons.IUtilK
+import com.mozhimen.kotlin.utilk.commons.IUtilK
 
 /**
  * @ClassName ManifestKPermissionScope

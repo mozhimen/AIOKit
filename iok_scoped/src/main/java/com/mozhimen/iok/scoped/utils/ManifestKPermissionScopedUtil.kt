@@ -6,15 +6,15 @@ import android.content.Intent
 import android.net.Uri
 import android.provider.DocumentsContract
 import androidx.documentfile.provider.DocumentFile
-import com.mozhimen.basick.elemk.android.content.cons.CIntent
-import com.mozhimen.basick.elemk.android.provider.cons.CDocumentsContract
+import com.mozhimen.kotlin.elemk.android.content.cons.CIntent
+import com.mozhimen.kotlin.elemk.android.provider.cons.CDocumentsContract
 import com.mozhimen.iok.scoped.cons.CManifestKPermissionScoped
-import com.mozhimen.basick.utilk.android.content.UtilKContentResolver
-import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
-import com.mozhimen.basick.utilk.commons.IUtilK
-import com.mozhimen.basick.utilk.kotlin.containStr
-import com.mozhimen.basick.utilk.kotlin.strUri2uri
-import com.mozhimen.basick.utilk.kotlin.text.removeEnd_ofSeparator
+import com.mozhimen.kotlin.utilk.android.content.UtilKContentResolver
+import com.mozhimen.kotlin.utilk.android.os.UtilKBuildVersion
+import com.mozhimen.kotlin.utilk.commons.IUtilK
+import com.mozhimen.kotlin.utilk.kotlin.containStr
+import com.mozhimen.kotlin.utilk.kotlin.strUri2uri
+import com.mozhimen.kotlin.utilk.kotlin.text.removeEnd_ofSeparator
 
 
 /**

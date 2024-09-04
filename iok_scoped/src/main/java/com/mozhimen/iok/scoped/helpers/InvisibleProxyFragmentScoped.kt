@@ -4,17 +4,17 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
+import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.Fragment
-import com.mozhimen.basick.elemk.android.content.cons.CIntent
-import com.mozhimen.basick.elemk.android.provider.cons.CDocumentsContract
-import com.mozhimen.basick.elemk.commons.IA_Listener
+import com.mozhimen.kotlin.elemk.android.content.cons.CIntent
+import com.mozhimen.kotlin.elemk.android.provider.cons.CDocumentsContract
+import com.mozhimen.kotlin.elemk.commons.IA_Listener
 import com.mozhimen.iok.scoped.cons.CManifestKPermissionScoped
 import com.mozhimen.iok.scoped.utils.ManifestKPermissionScopedUtil
-import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
-import com.mozhimen.basick.utilk.commons.IUtilK
-import com.mozhimen.basick.utilk.kotlin.strUri2uri
+import com.mozhimen.kotlin.utilk.android.os.UtilKBuildVersion
+import com.mozhimen.kotlin.utilk.commons.IUtilK
+import com.mozhimen.kotlin.utilk.kotlin.strUri2uri
 
 /**
  * @ClassName InvisibleProxyFragmentScoped
