@@ -23,7 +23,7 @@ rootProject.name = "AIOKit"
 include ':app'
 include ':iok_selector'
 include ':iok_scoped'
-include ':iok_ztzip'
+include ':iok_cache'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
@@ -37,5 +37,8 @@ include ':ACacheKit:cachek_basic'
 include ':ALibKit_Jetpack'
 project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
 include ':ALibKit_Jetpack:datastore'
-
-include ':iok_cache'
+//KUtilKit
+include ':KUtilKit'
+project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
+include ':KUtilKit:utilk_android'
+include ':KUtilKit:utilk_kotlin'
