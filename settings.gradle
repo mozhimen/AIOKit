@@ -21,13 +21,16 @@ dependencyResolutionManagement {
 
 rootProject.name = "AIOKit"
 include ':app'
-include ':iok_selector'
 include ':iok_scoped'
 include ':iok_cache'
-//SwiftKit
-include ':SwiftKit'
-project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
-include ':SwiftKit:basick'
+//ALibKit_Jetbrains
+include ':ALibKit_Jetbrains'
+project(':ALibKit_Jetbrains').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetbrains")
+include ':ALibKit_Jetbrains:kotlin_stdlib'
+//ASwiftKit
+include ':ASwiftKit'
+project(':ASwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\ASwiftKit")
+include ':ASwiftKit:basick'
 //ACacheKit
 include ':ACacheKit'
 project(':ACacheKit').projectDir = new File("D:\\WorkSpace\\GitHub\\ACacheKit")
@@ -42,3 +45,7 @@ include ':KUtilKit'
 project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
 include ':KUtilKit:utilk_android'
 include ':KUtilKit:utilk_kotlin'
+//KUtilKit
+include ':KUtilKit'
+project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
+include ':KUtilKit:utilk_android'
