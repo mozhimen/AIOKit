@@ -21,12 +21,22 @@ dependencyResolutionManagement {
 
 rootProject.name = "AIOKit"
 include ':app'
-include ':iok_scoped'
-include ':iok_cache'
+include ':scoped'
+include ':cache'
+//ALibKit_Google
+include ':ALibKit_Google'
+project(':ALibKit_Google').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Google")
+include ':ALibKit_Google:material'
+//ALibKit_Jetpack
+include ':ALibKit_Jetpack'
+project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
+include ':ALibKit_Jetpack:annotation'
+include ':ALibKit_Jetpack:core'
 //ALibKit_Jetbrains
 include ':ALibKit_Jetbrains'
 project(':ALibKit_Jetbrains').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetbrains")
 include ':ALibKit_Jetbrains:kotlin_stdlib'
+include ':ALibKit_Jetbrains:kotlinx_coroutines'
 //ASwiftKit
 include ':ASwiftKit'
 project(':ASwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\ASwiftKit")
@@ -34,18 +44,15 @@ include ':ASwiftKit:basick'
 //ACacheKit
 include ':ACacheKit'
 project(':ACacheKit').projectDir = new File("D:\\WorkSpace\\GitHub\\ACacheKit")
-include ':ACacheKit:cachek_datastore'
-include ':ACacheKit:cachek_basic'
+include ':ACacheKit:datastore'
+include ':ACacheKit:basic'
 //ALibKit_Jetpack
 include ':ALibKit_Jetpack'
 project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
 include ':ALibKit_Jetpack:datastore'
+include ':ALibKit_Jetpack:core'
 //KUtilKit
 include ':KUtilKit'
 project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
-include ':KUtilKit:utilk_android'
-include ':KUtilKit:utilk_kotlin'
-//KUtilKit
-include ':KUtilKit'
-project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
-include ':KUtilKit:utilk_android'
+include ':KUtilKit:android'
+include ':KUtilKit:kotlin'
