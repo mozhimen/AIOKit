@@ -41,7 +41,7 @@ abstract class BaseIOKCacheCleaner : BaseUtilK() {
         getSupportedCacheLimits().minByOrNull { abs(it - size) } ?: 0
 
     fun getDefaultCacheLimit(): Long {
-        val defaultCacheSize = (UtilKStorage.getInternalMemorySize_ofTotal() * 0.01f).roundToLong()
+        val defaultCacheSize = (UtilKStorage.getInternalStorageSize_ofTotal() * 0.01f).roundToLong()
         return getClosestCacheLimit(defaultCacheSize)
     }
 
